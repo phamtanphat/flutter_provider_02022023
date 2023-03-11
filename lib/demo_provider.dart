@@ -22,7 +22,12 @@ class _DemoProviderWidgetState extends State<DemoProviderWidget> {
       body: Container(
         child: Provider.value(
             value: map,
-            child: ChildWidget(),
+            child: Column(
+              children: [
+                ChildWidget(),
+                Child1Widget()
+              ],
+            ),
         ),
       ),
     );
@@ -44,4 +49,17 @@ class _ChildWidgetState extends State<ChildWidget> {
     );
   }
 }
+
+class Child1Widget extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Consumer<HashMap<String, String>>(
+        builder: (context, data, child) {
+          return Text("Child 1 ${data["name"]}");
+        }
+    );
+  }
+}
+
 
