@@ -43,7 +43,7 @@ class ChildWidget extends StatefulWidget {
 class _ChildWidgetState extends State<ChildWidget> {
   @override
   Widget build(BuildContext context) {
-    HashMap<String, String> map = Provider.of(context);
+    HashMap<String, String> map = context.read();
     return Container(
       child: Text(map["name"] ?? ""),
     );
