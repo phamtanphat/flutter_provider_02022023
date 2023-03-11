@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_02022023/demo_changenotifier.dart';
 import 'package:flutter_provider_02022023/demo_provider.dart';
+import 'package:flutter_provider_02022023/demo_valuelistenable_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: DemoChangeNotifierProviderWidget()
+      home: DemoValueListenableProviderWidget()
     );
   }
 }
